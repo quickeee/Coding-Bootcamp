@@ -7,15 +7,21 @@ def days(dayone,monthone,yearone,daytwo,monthtwo,yeartwo):
     c2 = 365*yeartwo + yeartwo//4 - yeartwo//100 + yeartwo//400 + (306*monthtwo + 5)//10 + daytwo - 1
     result = abs(c2 - c1)
     return result
+dates = input('Enter dates: ').split(" ")
 
-dateone = input("Dear user please enter the first date in the form dd/mm/yyyy: ")
-datetwo = input("Dear user please enter the second date in the form dd/mm/yyyy: ")
-yearone = int(dateone[4:])
-yeartwo = int(datetwo[4:])
-monthone = int(dateone[2:4])
-monthtwo = int(datetwo[2:4])
-dayone = int(dateone[0:2])
-daytwo = int(datetwo[0:2])
+date_1 = dates[0].split("/")
+date_2 = dates[1].split("/")
+
+for i in range(3):
+    date_1[i] = int(date_1[i])
+    date_2[i] = int(date_2[i])
+
+dayone = date_1[0]
+monthone = date_1[1]
+yearone = date_1[2]
+daytwo = date_2[0]
+monthtwo = date_2[1]
+yeartwo = date_2[2]
 #In the following statements the think behind this algorithm is:
 #We take the distance from the negative year till the 1/1 of the next negative year and we tranfer that distance to the positive years.
 #Let's say 5/10/-3. The distance form 5/10/-3 till 1/1/-2 is exactly the same as 5/10/3 till 1/1/4. All the leap years included correctly!
