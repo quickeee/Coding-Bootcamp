@@ -4,6 +4,7 @@ public class Customer {
 	private String name;
 	private int yearOfBirth;
 	private String sex;
+	public static Customer[] customers = new Customer[3];
 
 	public Customer(String name, int yearOfBirth, String sex) {
 		this.name = name;
@@ -11,6 +12,7 @@ public class Customer {
 		this.sex = sex;
 		this.customersCode = counter;
 		counter += 1;
+		customers[counter - 1] = this;
 	}
 
 	public void setName(String name) {

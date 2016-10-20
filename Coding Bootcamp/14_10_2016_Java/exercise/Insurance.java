@@ -4,14 +4,14 @@ public class Insurance {
 	private static int counter = 0;
 	protected int insuranceCode;
 	protected int duration;
-	int cost;
+	public static Insurance[] insurances = new Insurance[6];
 
 	Insurance(int customersCode, int duration) {
 		this.insuranceCode = counter;
 		this.customersCode = customersCode;
 		this.duration = duration;
-		this.cost = this.insurance_cost();
 		counter += 1;
+		insurances[counter - 1] = this;
 	}
 
 	public void setDuration(int duration) {
@@ -32,7 +32,7 @@ public class Insurance {
 
 	public String toString() {
 		return "The customer with id: " + getCustomersCode() + " has an insurance with id: " + getInsuranceCode()
-				+ " with duration: " + getDuration() + " and the cost is: " + cost;
+				+ " with duration: " + getDuration() + " and the cost is: " + this.insurance_cost();
 	}
 
 	public int insurance_cost() {
@@ -41,7 +41,7 @@ public class Insurance {
 
 	public void printInsurances(Customer[] customers) {
 		int i;
-		for (i = 0; i <= 9; i++) {
+		for (i = 0; i <= Insurance.insurances.length; i++) {
 			System.out.println(customers[i].toString());
 		}
 	}

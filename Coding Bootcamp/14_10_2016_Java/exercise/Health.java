@@ -5,7 +5,6 @@ public class Health extends Insurance {
 	Health(int expense, int customersCode, int duration) {
 		super(customersCode, duration);
 		this.expense = expense;
-		this.cost = insurance_cost();
 	}
 
 	public void setExpense(int expense) {
@@ -17,16 +16,15 @@ public class Health extends Insurance {
 	}
 
 	public int insurance_cost() {
-		if (TestInsurance.customers[customersCode].getSex().equals("male")) {
-			return super.insurance_cost() + 50
-					+ 7 * (2016 - TestInsurance.customers[this.customersCode].getYearOfBirth());
+		if (Customer.customers[customersCode].getSex().equals("male")) {
+			return super.insurance_cost() + 50 + 7 * (2016 - Customer.customers[this.customersCode].getYearOfBirth());
 		} else {
-			return super.insurance_cost() + 7 * (2016 - TestInsurance.customers[customersCode].getYearOfBirth());
+			return super.insurance_cost() + 7 * (2016 - Customer.customers[customersCode].getYearOfBirth());
 		}
 	}
 
 	public String toString() {
 		return "The customer with id: " + getCustomersCode() + " has a health insurance with id: " + getInsuranceCode()
-				+ " with duration: " + getDuration() + " and the cost is: " + cost;
+				+ " with duration: " + getDuration() + " and the cost is: " + this.insurance_cost();
 	}
 }
