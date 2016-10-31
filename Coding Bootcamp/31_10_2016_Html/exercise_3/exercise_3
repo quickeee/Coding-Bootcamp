@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Exercise-3</title>
+  </head>
+  <body>
+    <ul>
+      <li><h1>My Awesome Blog</h1></li>
+      <p> Lorsem ipsun.</p>
+        <ul>
+          </li>
+          <li><h2>Articles</h2>
+          <ul>
+            <li><h3>Article 1</h3>
+              <p>Lorem ipsum</p>
+            </li>
+            <li><h3>Article 2</h3>
+              <p>Lorem ipsum.</p>
+            </li>
+          </ul>
+          <li><h2>About me</h2>
+            <ul>
+              <li><h3>My work</h3>
+                <p>Lorem ipsum.</p>
+              </li>
+              <li><h3>My education</h3>
+                <p>Lorem ipsum.</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Exercise-1</title>
+  </head>
+  <body>
+    <img src="img1.png" style="width:128px;height:128px">
+  </body>
+</html>

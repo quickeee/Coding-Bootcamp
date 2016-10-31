@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise-5</title>
+  </head>
+  <body>
+    <form>
+      yes<input type="radio" name ="answer"><br />
+      no <input type="radio" name="answer">
+    </form>
+  </body>
+</html>
