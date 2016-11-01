@@ -1,0 +1,9 @@
+div {
+  background-color: blue;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+.test {
+  border: 20px solid blue;
+}
