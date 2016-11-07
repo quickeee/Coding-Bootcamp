@@ -27,7 +27,7 @@ public class UserDAO {
 		try {
 			// establish a connection with the database and creates a Connection
 			// object (con)
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bootcampexer", "root", "u3l45tnb8");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bootcampexer", "root", "xxxxx");
 		} catch (Exception e) {
 			con = null;
 			// throw SQLException if a database access error occurs
