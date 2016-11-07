@@ -26,14 +26,28 @@
 <body>
 
 	<div class="container">
+		<%
+			if (request.getAttribute("msg") != null) {
+		%>
+		<div
+			class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
+			<ul class="list-group">
+				<li class="list-group-item list-group-item-danger"><%=request.getAttribute("msg").toString()%></li>
+			</ul>
+		</div>
+
+		<%
+			}
+		%>
+
 		<div
 			class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4"
 			id="center">
 			<form class="navbar-form navbar-left" role="search"
 				action="http://localhost:8080/PersonalProject/delete" method="post">
 				<div class="form-group">
-					<input name="deleteId" type="text" class="form-control"
-						placeholder="Enter the Task's ID">
+					<input name="deleteId" type="number" class="form-control"
+						placeholder="Enter the Task's ID" required>
 				</div>
 				<br /> <br />
 				<div class="col-lg-4 col-lg-offset-2">
@@ -42,14 +56,21 @@
 			</form>
 		</div>
 	</div>
-	
+	<div style="position: fixed; bottom: 5%; right: 0;">
+		<a href="Index.jsp"><button type="button"
+				class="btn btn-default btn-lg">
+				<span class="glyphicon glyphicon-home" aria-hidden="true"></span>Return
+				to Home!
+			</button></a>
+	</div>
+
 	<!-- Site footer -->
 	<footer class="footer">
 		<div class="container">
 			<p class="text-muted">&copy 2016 Θεοδωρόπουλος Λάμπρος-Δημήτριος</p>
 		</div>
 	</footer>
-	
+
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

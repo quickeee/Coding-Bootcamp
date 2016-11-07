@@ -61,7 +61,14 @@
 			</table>
 		</div>
 	</div>
-	
+	<div style="position: fixed; bottom: 5%; right: 0;">
+		<a href="Index.jsp"><button type="button"
+				class="btn btn-default btn-lg">
+				<span class="glyphicon glyphicon-home" aria-hidden="true"></span>Return
+				to Home!
+			</button></a>
+	</div>
+
 	<!-- Site footer -->
 	<footer class="footer">
 		<div class="container">

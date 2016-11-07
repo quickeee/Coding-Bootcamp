@@ -15,6 +15,8 @@ import service.TaskService;
 
 /**
  * Servlet implementation class ListServlet
+ * 
+ * @author Dimitris
  */
 @WebServlet("/list")
 public class TaskListServlet extends HttpServlet {
@@ -43,15 +45,6 @@ public class TaskListServlet extends HttpServlet {
 		request.setAttribute("task_list", tasks);
 		getServletContext().getRequestDispatcher("/TaskList.jsp").forward(request, response);
 
-		// for (Task task : mService.findAll()){
-		// response.getWriter().append("Task: ")
-		// .append(String.valueOf(task.getTaskId()))
-		// .append(", ")
-		// .append(task.getWorkField())
-		// .append(", ")
-		// .append(task.getDeadline().toString())
-		// .append("\n");
-		// }
 	}
 
 	/**

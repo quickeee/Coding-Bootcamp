@@ -14,6 +14,8 @@ import service.TaskService;
 
 /**
  * Servlet implementation class UpdateServlet
+ * 
+ * @author Dimitris
  */
 @WebServlet("/update")
 public class UpdateServlet extends HttpServlet {
@@ -44,13 +46,22 @@ public class UpdateServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String taskId = request.getParameter("taskId");
 		String workField = request.getParameter("workField");
-		String deadline = request.getParameter("deadline");
+		String date = null;
+		date = request.getParameter("date");
+		Timestamp deadline = null;
+		deadline = Timestamp.valueOf(date + " " + "23:59:59");
 		Task task = mService.findOne(Integer.parseInt(taskId));
-		if (mService.update(task.setDeadline(Timestamp.valueOf(deadline)).setWorkField(workField))) {
-			response.sendRedirect("http://localhost:8080/PersonalProject/index");
-		}else {
-			response.getWriter().append("An error occured");
+		if (task == null) {
+			String msg = "The Task you would like to update does not exist. Please give a new Task Id!";
+			request.setAttribute("msg", msg);
+			request.getRequestDispatcher("/update.jsp").forward(request, response);
+			return;
+		} else {
+			if (mService.update(task.setDeadline(deadline).setWorkField(workField))) {
+				response.sendRedirect("http://localhost:8080/PersonalProject/index");
+			} else {
+				response.getWriter().append("An error occured");
+			}
 		}
 	}
-
 }

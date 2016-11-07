@@ -14,6 +14,8 @@ import service.TaskService;
 
 /**
  * Servlet implementation class CreateServlet
+ * 
+ * @author Dimitris
  */
 @WebServlet("/create")
 public class CreateServlet extends HttpServlet {
@@ -41,22 +43,26 @@ public class CreateServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String deadLine = request.getParameter("deadLine");
+		// String deadLine = request.getParameter("deadLine");
 		String fieldOfWork = request.getParameter("fieldOfWork");
-		if (deadLine == null | deadLine.length() == 0) {
-			response.getWriter().append("Wrong deadline");
-			return;
-		}
-		if (fieldOfWork == null | fieldOfWork.length() == 0) {
-			response.getWriter().append("Wrong work field");
-			return;
-		}
+		// if (deadLine == null | deadLine.length() == 0) {
+		// response.getWriter().append("Wrong deadline");
+		// return;
+		// }
+		// if (fieldOfWork == null | fieldOfWork.length() == 0) {
+		// response.getWriter().append("Wrong work field");
+		// return;
+		// }
 		/**
 		 * For the purposes of this personal project we will assume that all the
 		 * new Tasks are made by the simple user with Id 1.
 		 */
 		TaskService mService = new TaskService();
-		Task task = new Task().setDeadline(Timestamp.valueOf(request.getParameter("deadLine"))).setSimpleUserId(1)
+		String date = null;
+		date = request.getParameter("date");
+		Timestamp deadline = null;
+		deadline = Timestamp.valueOf(date + " " + "23:59:59");
+		Task task = new Task().setDeadline(deadline).setSimpleUserId(1)
 				.setWorkField(request.getParameter("fieldOfWork"));
 
 		Task task1;

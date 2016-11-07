@@ -12,6 +12,8 @@ import service.TaskService;
 
 /**
  * Servlet implementation class DeleteServlet
+ * 
+ * @author Dimitris
  */
 @WebServlet("/delete")
 public class DeleteServlet extends HttpServlet {
@@ -42,6 +44,13 @@ public class DeleteServlet extends HttpServlet {
 			throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("deleteId"));
 		Task task = mService.findOne(id);
+		// Check if the requested Task does not exists.
+		if (task == null) {
+			String msg = "This Task does not exist. Please try again!";
+			request.setAttribute("msg", msg);
+			request.getRequestDispatcher("/delete.jsp").forward(request, response);
+			return;
+		}
 		if (mService.delete(task)) {
 			response.sendRedirect("http://localhost:8080/PersonalProject/index");
 		} else {
