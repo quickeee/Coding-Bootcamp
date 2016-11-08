@@ -1,0 +1,18 @@
+The purpose of this personal project is to create the first full stack application as the coding-bootcamp suggests.
+This particular project is a part from our team's project. The team's project is a platform that simple users post Tasks,
+for example if someone wants a DJ for his party, he simply post a Task looking for a DJ. Then a professional user
+search for the Tasks and bids the amount that he would like in order to complete the requested Task. The smaller bid, 
+inside the deadline that the simple user sets, wins and take the Task. So a contract turns out between the simple user
+that posted the Task and the professional user that won the biding. 
+
+My part of this team project is the Tasks part, that manages the Tasks, creating, deleting, setting deadline, etc...
+In order to complete this full stack web application the tools i used are:
+*Eclipse - for the java coding part!
+*JDBC- connect with the database!
+*Servlets + Jsp - Connect the java part with front-end!
+
+**Everywhere in this project we assume that the simple user that manages the Tasks is the simple user with ID 1.
+**The Date types of the forms best work in google chrome that best supports HTML-5.
+Thanks for you kind support!
+author- Theodoropoulos Dimitrios
+
