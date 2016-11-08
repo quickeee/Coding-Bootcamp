@@ -20,10 +20,6 @@ public class TaskService {
 	 * 
 	 * @param taskId
 	 * @return
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
 	 */
 	public Task findOne(int taskId) {
 		try {
@@ -39,10 +35,6 @@ public class TaskService {
 	 * Find all existing Tasks in database.
 	 * 
 	 * @return
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
 	 */
 	public List<Task> findAll() {
 		try {
@@ -73,11 +65,8 @@ public class TaskService {
 	 * Updates one or more columns in a Task record in database.
 	 * 
 	 * @param task
-	 * @return
-	 * @throws SQLException
-	 * @throws IllegalAccessException
-	 * @throws ClassNotFoundException
-	 * @throws InstantiationException
+	 * @return boolean.
+	 * 
 	 */
 	public boolean update(Task task) {
 		try {
@@ -93,10 +82,6 @@ public class TaskService {
 	 * 
 	 * @param task
 	 * @return
-	 * @throws SQLException
-	 * @throws IllegalAccessException
-	 * @throws ClassNotFoundException
-	 * @throws InstantiationException
 	 */
 	public boolean delete(Task task) {
 		try {

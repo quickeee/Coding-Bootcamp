@@ -43,16 +43,8 @@ public class CreateServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// String deadLine = request.getParameter("deadLine");
+		
 		String fieldOfWork = request.getParameter("fieldOfWork");
-		// if (deadLine == null | deadLine.length() == 0) {
-		// response.getWriter().append("Wrong deadline");
-		// return;
-		// }
-		// if (fieldOfWork == null | fieldOfWork.length() == 0) {
-		// response.getWriter().append("Wrong work field");
-		// return;
-		// }
 		/**
 		 * For the purposes of this personal project we will assume that all the
 		 * new Tasks are made by the simple user with Id 1.
