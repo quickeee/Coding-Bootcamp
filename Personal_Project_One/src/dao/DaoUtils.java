@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class DaoUtils {
 	private static final String databaseUrl = "jdbc:mysql://localhost:3306/bids4job_db";
 	private static final String databaseUsername = "root";
-	private static final String databasePassword = "xxxx";
+	private static final String databasePassword = "xxxxx";
 
 	public static Connection getConnection()
 			throws SQLException, IllegalAccessException, InstantiationException, ClassNotFoundException {

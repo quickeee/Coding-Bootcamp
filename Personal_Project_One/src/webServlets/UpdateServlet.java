@@ -35,7 +35,7 @@ public class UpdateServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("/update.jsp").forward(request, response);
+		request.getRequestDispatcher("update.jsp").forward(request, response);
 	}
 
 	/**
@@ -54,11 +54,11 @@ public class UpdateServlet extends HttpServlet {
 		if (task == null) {
 			String msg = "The Task you would like to update does not exist. Please give a new Task Id!";
 			request.setAttribute("msg", msg);
-			request.getRequestDispatcher("/update.jsp").forward(request, response);
+			request.getRequestDispatcher("update.jsp").forward(request, response);
 			return;
 		} else {
 			if (mService.update(task.setDeadline(deadline).setWorkField(workField))) {
-				response.sendRedirect("http://localhost:8080/PersonalProject/index");
+				response.sendRedirect("index");
 			} else {
 				response.getWriter().append("An error occured");
 			}

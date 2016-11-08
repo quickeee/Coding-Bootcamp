@@ -48,11 +48,11 @@ public class DeleteServlet extends HttpServlet {
 		if (task == null) {
 			String msg = "This Task does not exist. Please try again!";
 			request.setAttribute("msg", msg);
-			request.getRequestDispatcher("/delete.jsp").forward(request, response);
+			request.getRequestDispatcher("delete.jsp").forward(request, response);
 			return;
 		}
 		if (mService.delete(task)) {
-			response.sendRedirect("http://localhost:8080/PersonalProject/index");
+			response.sendRedirect("index");
 		} else {
 			response.getWriter().append("An error occured");
 		}

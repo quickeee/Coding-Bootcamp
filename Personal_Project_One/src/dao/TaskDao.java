@@ -41,7 +41,7 @@ public class TaskDao {
 	public Task findOne(int taskId)
 			throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException {
 		Task task = null;
-		String query = "SELECT * FROM TASK WHERE TASK_ID = ?";
+		String query = "SELECT * FROM task WHERE task_ID = ?";
 		prepareResources();
 		try {
 			connection = DaoUtils.getConnection();
@@ -71,7 +71,7 @@ public class TaskDao {
 	public List<Task> findAll()
 			throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException {
 		List<Task> tasks = new ArrayList<>();
-		String query = "SELECT * FROM TASK";
+		String query = "SELECT * FROM task";
 		prepareResources();
 		try {
 			connection = DaoUtils.getConnection();
@@ -98,7 +98,7 @@ public class TaskDao {
 	 */
 	public Task create(Task task)
 			throws SQLException, IllegalAccessException, ClassNotFoundException, InstantiationException {
-		String query = "INSERT INTO TASK (deadline, work_field, simple_user_id) VALUES (?,?,?)"; // taskId
+		String query = "INSERT INTO task (deadline, work_field, simple_user_ID) VALUES (?,?,?)"; // taskId
 																									// is
 																									// auto
 																									// incremented.
@@ -132,7 +132,7 @@ public class TaskDao {
 	public boolean update(Task task)
 			throws SQLException, IllegalAccessException, ClassNotFoundException, InstantiationException {
 		int rowsAffected = 0;
-		String query = "UPDATE TASK SET DEADLINE = ?, WORK_FIELD = ?, SIMPLE_USER_ID = ? WHERE TASK_ID = ?";
+		String query = "UPDATE task SET deadline = ?, work_field = ?, simple_user_ID = ? WHERE task_ID = ?";
 		prepareResources();
 		try {
 			connection = DaoUtils.getConnection();
@@ -163,7 +163,7 @@ public class TaskDao {
 	public boolean delete(Task task)
 			throws SQLException, IllegalAccessException, ClassNotFoundException, InstantiationException {
 		int rowsAffected;
-		String query = "DELETE FROM TASK WHERE TASK_ID = ?";
+		String query = "DELETE FROM task WHERE task_ID = ?";
 		prepareResources();
 		try {
 			connection = DaoUtils.getConnection();
@@ -188,9 +188,9 @@ public class TaskDao {
 	 */
 	public Task populate(ResultSet resultSet) {
 		try {
-			return new Task().setTaskId(resultSet.getInt("task_id")).setDeadline(resultSet.getTimestamp("deadline"))
+			return new Task().setTaskId(resultSet.getInt("task_ID")).setDeadline(resultSet.getTimestamp("deadline"))
 					.setWorkField(resultSet.getString("work_field"))
-					.setSimpleUserId(resultSet.getInt("simple_user_id"));
+					.setSimpleUserId(resultSet.getInt("simple_user_ID"));
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 			return null;
