@@ -35,17 +35,11 @@
 		<div class="masthead">
 			<nav>
 				<ul class="nav nav-justified">
-					<li class="active"><a
-						href="http://localhost:8080/PersonalProject/list">Show All
-							Tasks</a></li>
-					<li><a href="http://localhost:8080/PersonalProject/find.jsp">Find
-							Specific Task</a></li>
-					<li><a href="http://localhost:8080/PersonalProject/create">Create
-							Your Task</a></li>
-					<li><a href="http://localhost:8080/PersonalProject/update">Update
-							A Task</a></li>
-					<li><a href="http://localhost:8080/PersonalProject/delete">Delete
-							A Task</a></li>
+					<li class="active"><a href="list">Show All Tasks</a></li>
+					<li><a href="find.jsp">Find Specific Task</a></li>
+					<li><a href="create">Create Your Task</a></li>
+					<li><a href="update">Update A Task</a></li>
+					<li><a href="delete">Delete A Task</a></li>
 					<!--<li><a href="#">Contact</a></li>-->
 				</ul>
 			</nav>
@@ -62,7 +56,7 @@
 			</p>
 			<p>
 				<a class="btn btn-lg btn-success"
-					href="http://localhost:8080/PersonalProject/create" role="button">Create
+					href="create" role="button">Create
 					Your Task!</a>
 			</p>
 		</div>

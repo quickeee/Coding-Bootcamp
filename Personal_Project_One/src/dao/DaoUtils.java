@@ -11,9 +11,9 @@ import java.sql.SQLException;
  * @author Dimitris
  */
 public class DaoUtils {
-	private static final String databaseUrl = "jdbc:mysql://localhost/bids4job_db?useSSL=false";
+	private static final String databaseUrl = "jdbc:mysql://localhost:3306/bids4job_db";
 	private static final String databaseUsername = "root";
-	private static final String databasePassword = "xxxxx";
+	private static final String databasePassword = "xxxx";
 
 	public static Connection getConnection()
 			throws SQLException, IllegalAccessException, InstantiationException, ClassNotFoundException {
