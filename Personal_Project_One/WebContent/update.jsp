@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
+<%@ page import="java.text.DateFormat"%>
+<%@ page import="java.text.SimpleDateFormat"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +28,10 @@
     <![endif]-->
 </head>
 <body>
+	<%
+		Date date = new Date();
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	%>
 	<div class="container">
 		<%
 			if (request.getAttribute("msg") != null) {
@@ -42,15 +50,16 @@
 		<div
 			class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4"
 			id="center">
-			<form class="navbar-form navbar-left" role="search"
-				action="update" method="post">
+			<form class="navbar-form navbar-left" role="search" action="update"
+				method="post">
 				<div class="form-group">
 					<input name="taskId" type="number" class="form-control"
 						placeholder="Enter the Task's ID" required><br /> <input
 						name="workField" type="text" class="form-control"
 						placeholder="Enter the field of work" required><br /> <span
 						style="color: yellow;">Deadline:</span><br /> <input type="date"
-						name="date" class="form-control" required min="2016-11-08"><br />
+						name="date" class="form-control" required
+						min="<%=dateFormat.format(date)%>"><br />
 				</div>
 				<br /> <br />
 				<div class="col-lg-4 col-lg-offset-2">

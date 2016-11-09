@@ -54,7 +54,11 @@ public class DeleteServlet extends HttpServlet {
 		if (mService.delete(task)) {
 			response.sendRedirect("index");
 		} else {
-			response.getWriter().append("An error occured");
+			response.getWriter()
+					.append("You cannot delete this Task because the primary key of this Task is a foreign key in other tables"
+							+ " and we have not decide yet what to do in the team project in case of delete!"
+							+ "This personal project, the manipulation of Tasks is part of a team project, as it is declared in the project description file in github!"
+							+ " Thank you for your understanding!");
 		}
 	}
 }
