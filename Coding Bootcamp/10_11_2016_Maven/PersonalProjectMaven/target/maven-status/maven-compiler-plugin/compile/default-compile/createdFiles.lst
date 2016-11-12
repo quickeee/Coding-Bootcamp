@@ -1,0 +1,12 @@
+webServlets\DeleteServlet.class
+webServlets\TaskListServlet.class
+dao\DaoUtils.class
+webServlets\IndexServlet.class
+testers\TaskDaoTester.class
+webServlets\CreateServlet.class
+webServlets\UpdateServlet.class
+dao\TaskDao.class
+domain\Task.class
+testers\TaskTester.class
+service\TaskService.class
+testers\TaskServiceTester.class
