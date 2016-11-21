@@ -1,0 +1,18 @@
+# Eclipse
+/bin/
+.settings
+.metadata
+
+# Intellij IDEA
+.idea
+.classpath
+.project
+*.iml
+/out/
+
+# Maven
+/target
+/src/main/resources/config.properties
+
+# MAC_OS
+.DS_Store
