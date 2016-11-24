@@ -1,0 +1,34 @@
+//Exercise 1: Syntax: Variables
+
+var greeting = 'Hello world!';
+
+//Exercise 2: Syntax: Control flow (if statements)
+
+if (n === 0) {
+  isZero = true;
+}else {
+  isZero = false;
+}
+
+//Exercise 3: Syntax: Control flow (loops)
+
+for (var i = 0;i < 5;i++) {
+  counter = counter + 1;
+}
+
+//Exercise 4: Syntax: Functions
+
+function cube(n) {
+	return n * n * n;
+}
+
+//Exercise 5: DOM: Creating HTML elements
+
+var image = document.createElement('img');
+var divaki = document.getElementById('parent');
+divaki.appendChild(image);
+
+//Exercise 6: DOM: Modifying HTML elements
+
+var icon = document.getElementById('avatar');
+icon.src = 'https://github.com/parisk.png';
