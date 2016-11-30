@@ -2,7 +2,7 @@ import java.util.Vector;
 
 public class ThreadEx implements Runnable {
 
-	private Vector<Long> v = new Vector<>();
+	private Vector<Long> v;
 
 	public ThreadEx(Vector<Long> v) {
 		this.v = v;
